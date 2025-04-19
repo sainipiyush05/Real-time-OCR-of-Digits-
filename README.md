@@ -1,48 +1,71 @@
-Real-Time OCR System for Digit Recognition
-Objective
-To develop a deep learning-based system that recognizes digits from real-time inputs, such as a camera feed, using Optical Character Recognition (OCR). The system will:
+# 🧑‍💻 Real-Time OCR of Digits 📸
 
-Detect and recognize digits in real-time.
-Display the recognized digits.
-Provide metrics on accuracy and recognition speed.
-Steps to Develop the System
-1. Data Preparation
-Dataset: Utilize the MNIST dataset, containing 70,000 labeled images of handwritten digits (0-9), ideal for digit recognition.
-Preprocessing:
-Normalize images from the dataset.
-Resize images if necessary.
-Ensure real-time feed undergoes similar preprocessing steps (e.g., converting to grayscale, resizing).
-2. Model Selection
-CNN Architecture:
-Use Convolutional Neural Networks (CNNs), effective for image classification tasks.
-Start with a simple CNN architecture like LeNet, designed for digit recognition. Consider using a deeper network for improved accuracy.
-Framework:
-Choose between TensorFlow/Keras or PyTorch:
-TensorFlow/Keras: Easier for beginners with more abstraction.
-PyTorch: Offers flexibility and control over the training loop.
-3. Model Training
-Train the CNN on the MNIST dataset.
-Evaluate the model's accuracy on the test set to ensure generalization.
-Fine-tune hyperparameters (learning rate, batch size, number of epochs) to enhance accuracy.
-4. Real-Time OCR System
-Video Capture: Use OpenCV to capture real-time video from a camera, processing each frame.
-Preprocessing: Convert each frame to grayscale, binarize, and segment the digits.
-Digit Recognition: Pass the preprocessed image of each detected digit through the trained CNN model to predict the digit.
-Display Output: Utilize OpenCV functions to overlay recognized digits on the video stream in real-time.
-5. Performance Metrics
-Accuracy: Evaluate recognition accuracy on a real-time test set, including the percentage of correctly classified digits.
-Speed (Latency): Measure the time taken to process each frame and predict digits, ensuring efficient real-time performance on available hardware.
-Deliverables
-Real-time OCR System:
-A fully functional system that captures video, recognizes digits, and displays them in real-time.
-Trained Model:
-A deep learning model (CNN) trained to recognize digits with high accuracy.
-Performance Report:
-Metrics showing the system's accuracy on real-world data, including frame rate (FPS) and recognition latency.
-Tools and Libraries
-Deep Learning:
-TensorFlow/Keras or PyTorch for building and training the CNN model.
-Computer Vision:
-OpenCV for real-time video capture and image processing.
-Dataset:
-MNIST dataset for training the CNN.
+A real-time Optical Character Recognition (OCR) system that extracts handwritten digits from live camera feeds using deep learning models trained on the MNIST dataset.
+
+## 🚀 Project Overview
+
+This project uses a Convolutional Neural Network (CNN) to recognize handwritten digits from images and live camera feeds. It leverages the MNIST dataset for training and uses OpenCV for capturing video input. The system is designed to provide real-time digit recognition for various applications such as automated data entry and digit tracking.
+
+## 🧠 Features
+
+- Real-time digit recognition from live video feeds.
+- Uses a CNN model trained on the MNIST dataset.
+- Captures video using OpenCV and processes frames for digit detection.
+- Outputs recognized digits in real time on the display.
+
+## 📊 Dataset
+
+- **Source**: MNIST dataset of handwritten digits.
+- **Attributes**: 28x28 grayscale images representing digits 0-9.
+
+## 🛠️ Tech Stack
+
+- Python
+- TensorFlow/Keras (for deep learning model)
+- OpenCV (for real-time video capture and image processing)
+- NumPy, Matplotlib (for data manipulation and visualization)
+
+## ⚙️ How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sainipiyush05/Real-time-OCR-of-Digits.git
+   cd Real-time-OCR-of-Digits
+Install dependencies:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Run the real-time OCR script:
+
+bash
+Copy
+Edit
+python real_time_ocr.py
+The webcam will start, and the system will detect and display digits from the live feed.
+
+📌 Screenshots
+Add screenshots of the live OCR recognition if available.
+
+✅ Model Accuracy
+The model is trained on the MNIST dataset and achieves high accuracy in recognizing handwritten digits, providing reliable real-time performance.
+
+📁 Folder Structure
+sql
+Copy
+Edit
+Real-time-OCR-of-Digits/
+├── real_time_ocr.py
+├── mnist_model.h5
+├── requirements.txt
+├── README.md
+└── utils.py
+👨‍💻 Author
+Piyush Saini
+
+🌟 Contribute
+Feel free to fork the project and submit pull requests. Contributions and improvements are always welcome!
+
+📄 License
+This project is open-source and available under the MIT License.
